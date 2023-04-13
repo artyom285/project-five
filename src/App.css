@@ -1,0 +1,267 @@
+.App {
+    background: linear-gradient(#e91e63, #f44336);
+    padding: 0px 150px;
+    min-height: 100vh;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 115px;
+}
+
+.logo {
+    color: white;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+nav ul {
+    display: flex;
+    gap: 40px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.menu {
+    color: white;
+    display: none;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.add {
+    background-color: #6a1b9a;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    transition: 0.3s;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.4);
+}
+
+.add:hover {
+    background-color: #4a148c;
+}
+
+.Blogs {
+    padding: 57.5px 0px 115px 0px;
+}
+
+.blog {
+    padding: 40px;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.3);
+    border: 5px solid #4a148c;
+    border-radius: 20px;
+    background-color: white;
+}
+
+.blog:not(:first-child) {
+    margin-top: 25px;
+}
+
+.author {
+    color: #e91e63;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.title {
+    font-weight: 800;
+    font-size: 25px;
+    line-height: 1.4em;
+}
+
+.desc {
+    color: gray;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    margin: 15px 0px calc(15px + 1.4em) 0px;
+    line-height: 1.8em;
+}
+
+#desc-details {
+    -webkit-line-clamp: initial;
+}
+
+.more, .del{
+    background-color: blue;
+    color: white;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 15px 30px;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.3);
+    transition: 0.3s;
+}
+
+.del {
+    background-color: crimson;
+}
+
+.more:hover {
+    background-color: mediumblue;
+}
+
+.del:hover {
+    background-color: firebrick;
+}
+
+.Details {
+    padding: 57.5px 0px 115px 0px;
+}
+
+.Add {
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px;
+    margin: 57.5px 0px 115px 0px;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.3);
+    border: 5px solid #4a148c;
+    border-radius: 20px;
+    width: 500px;
+    background-color: white;
+}
+
+form input, textarea, button {
+    background: none;
+    outline: none;
+    border: none;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.3);
+    font-size: 15px;
+    font-weight: 700;
+    padding: 15px;
+    border-radius: 10px;
+    max-width: 500px;
+}
+
+textarea {
+    resize: none;
+    height: 115px;
+}
+
+form button {
+    background-color: blue;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+    transition: 0.3s;
+}
+
+form button:hover {
+    background-color: mediumblue;
+}
+
+.sidenav {
+    position: fixed;
+    overflow: auto;
+    background-color: #ff1744;
+    width: 350px;
+    height: 100vh;
+    top: 0%;
+    z-index: 1;
+    left: -350px;
+    transition: 0.3s;
+    box-shadow: 2px 2px 4px rgb(0, 0, 0, 0.3);
+}
+
+.sidenav.active {
+    left: 0%;
+}
+
+.sidenav ul {
+    margin: 25px 0px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+}
+
+.links {
+    margin: 20px 0px;
+}
+
+.links a {
+    color: white;
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 15px 30px;
+    transition: 0.3s;
+}
+
+.link-i {
+    font-size: 25px;
+    margin-right: 20px;
+}
+
+.links a:hover {
+    background-color: rgb(255, 255, 255, 0.2);
+}
+
+.before {
+    position: fixed;
+    opacity: 0;
+    pointer-events: none;
+    width: 100%;
+    height: 100%;
+    top: 0%;
+    left: 0%;
+    transition: 0.3s;
+    background-color: rgb(0, 0, 0, 0.5);
+}
+
+.before.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+@media(max-width: 1100px) {
+    nav ul {
+        display: none;
+    }
+
+    .App {
+        padding: 0px 100px;
+    }
+
+    nav {
+        height: 100px;
+    }
+
+    .menu {
+        display: block;
+    }
+}
+
+@media(max-width: 800px) {
+    .App {
+        padding: 0px 70px;
+    }
+}
+
+@media(max-width: 540px) {
+    .App {
+        padding: 0px 50px;
+    }
+
+    nav {
+        height: 90px;
+    }
+}
